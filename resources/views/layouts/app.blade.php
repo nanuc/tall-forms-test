@@ -14,9 +14,8 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         @livewireStyles
-@stack("styles")
-@stack("styles")
         @stack('styles')
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
@@ -43,8 +42,7 @@
         @stack('modals')
 
         @livewireScripts
-@stack("scripts")
-@stack("scripts")
         @stack('scripts')
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     </body>
 </html>

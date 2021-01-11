@@ -3,12 +3,12 @@
 namespace App\Http\Livewire\Forms;
 
 use App\Models\User;
+use App\Resources\UserResource;
 use Livewire\Component;
 use Tanthammar\TallForms\Input;
-use Tanthammar\TallForms\Repeater;
 use Tanthammar\TallForms\TallForm;
 
-class UserForm extends Component
+class TallFormWithSameResource extends Component
 {
     use TallForm;
 
@@ -28,6 +28,8 @@ class UserForm extends Component
     // Mandatory method
     public function onCreateModel($validated_data)
     {
+        $validated_data['password'] = 1;
+
         // Set the $model property in order to conditionally display fields when the model instance exists, on saveAndStayResponse()
         $this->model = User::create($validated_data);
     }
@@ -38,11 +40,8 @@ class UserForm extends Component
         $this->model->update($validated_data);
     }
 
-
     public function fields()
     {
-        return [
-            Input::make('Name')->rules('required'),
-        ];
+        return UserResource::asForm(['is_active', 'name']);
     }
 }

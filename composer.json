@@ -9,9 +9,17 @@
     "license": "MIT",
     "repositories": [
         {
-        "type": "path",
-        "url": "../tall-forms"
-    }
+            "type": "vcs",
+            "url": "https://github.com/nanuc/livewire-datatables"
+        },
+        {
+            "type": "path",
+            "url": "../tall-forms"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/tanthammar/tall-forms-sponsors"
+        }
     ],
     "require": {
         "php": "^7.3|^8.0",
@@ -24,7 +32,10 @@
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.0",
         "nanuc/helpers": "^1.0",
-        "nanuc/tall-forms": "dev-master"
+        "nanuc/tall-forms": "dev-master",
+        "mediconesystems/livewire-datatables": "dev-master",
+        "spatie/laravel-ray": "^1.3",
+        "tanthammar/tall-forms-sponsors": "^3.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
